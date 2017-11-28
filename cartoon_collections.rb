@@ -11,12 +11,13 @@ def summon_captain_planet(array)
   array.map { |e| e.capitalize << "!" }
 end
 
-
+#The method should tell us if any of the calls are longer than four characters.
 def long_planeteer_calls(array)
   array.any? { |e| e.length > 4 }
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
+
+def find_the_cheese(array)
+  array.any? { |e| cheese_types.include?(e) }
   cheese_types = ["cheddar", "gouda", "camembert"]
 end
