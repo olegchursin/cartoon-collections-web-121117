@@ -16,16 +16,22 @@ def long_planeteer_calls(array)
   array.any? { |e| e.length > 4 }
 end
 
-
-def find_the_cheese(array)
+def find_the_cheese(foods)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  cheese = array & cheese_types
-  if cheese.size != 0
-    cheese[0]
-  end
+  cheese_types.collect{ |c| foods.include?(c)}.include?(true)
 end
 
 
+#working
+# def find_the_cheese(array)
+#   cheese_types = ["cheddar", "gouda", "camembert"]
+#   cheese = array & cheese_types
+#   if cheese.size != 0
+#     cheese[0]
+#   end
+# end
+
+#not working
 # def find_the_cheese(array)
 #   cheese_types = ["cheddar", "gouda", "camembert"]
 #   cheese = array.any? { |e| cheese_types.include?(e) }
