@@ -16,20 +16,16 @@ def long_planeteer_calls(array)
   array.any? { |e| e.length > 4 }
 end
 
-def find_the_cheese(foods)
+#The find_the_cheese method should accept an array of strings. It should then look through
+#these strings to find and return the first string that is a type of cheese.
+#The types of cheese that appear are "cheddar", "gouda", and "camembert".
+def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  cheese_types.collect{ |c| foods.include?(c)}.include?(true)
+  cheese = array & cheese_types
+  if cheese.size != 0
+    puts cheese[0]
+  end
 end
-
-
-#working
-# def find_the_cheese(array)
-#   cheese_types = ["cheddar", "gouda", "camembert"]
-#   cheese = array & cheese_types
-#   if cheese.size != 0
-#     cheese[0]
-#   end
-# end
 
 #not working
 # def find_the_cheese(array)
